@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+	--color-pink-100: #feeaee;
+	--color-pink-200: #fddfe5;
+	--color-pink-300: #fcd4dc;
+	--color-pink-400: #fccad4;
+	--color-pink-500: #fbbfcb;
+	--color-pink-600: #ff6d5a;
+	/* --color-pink-600: #fe4763; */
+
+	--color-danger-100: #f8d7da;
+	--color-danger-200: #dc3545;
+	--color-danger-300: #c82333;
+	--color-danger-400: #9d1c24;
+
+	--color-success-100: #d4edda;
+	--color-success-200: #23ce6b;
+	--color-success-300: #28a745;
+	--color-success-400: #218838;
+	--color-success-500: #155724;
+
+	--color-blue-100: #007bff;
+	--color-blue-200: #0069d9;
+
+	--color-white-100: #f9fafb;
+	--color-dark-100: #333;
+
+	--fixed-width: 1280px;
+
+	--color-primary: var(--color-pink-600);
+	--color-body-bg: var(--color-white-100);
+	--color-body-text: var(--color-dark-100);
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+
+body {
+	font-family: "Roboto", Arial, sans-serif;
+	font-size: 1.6rem;
+	background-color: var(--color-body-bg);
+	color: var(--color-body-text);
+	line-height: 1.5;
+	min-height: 100vh;
+	min-width: 360px;
+	text-rendering: optimizeSpeed;
+}
