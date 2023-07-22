@@ -375,6 +375,10 @@ picture {
 	border-radius: 0.6rem;
 }
 
+.rounded-pill {
+	border-radius: 9999px !important;
+}
+
 /* icon  general classes*/
 .icon-sm {
 	--icon-dimen: 2.5rem;
