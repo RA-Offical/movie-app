@@ -18,6 +18,11 @@ a:not([class]) {
 	text-decoration-skip-ink: auto;
 }
 
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
 /* Make images easier to work with */
 img,
 picture {
@@ -107,4 +112,261 @@ picture {
 
 .right-0 {
 	right: 0;
+}
+
+/* general classes about section max width and centering */
+.max-fw {
+	max-width: var(--fixed-width);
+	width: 90%;
+}
+
+.margin-c {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* general classes for padding */
+.padx-05x {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+.padx-01x {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+.padx-15x {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+.padx-20x {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+.padx-25x {
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
+}
+.padx-30x {
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+
+.pady-05x {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+.pady-01x {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+.pady-15x {
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+}
+.pady-20x {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+.pady-25x {
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+}
+.pady-30x {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+.md-padx-1x {
+	--pad-x: 1rem;
+	padding-left: var(--pad-x);
+	padding-right: var(--pad-x);
+}
+.md-padx-2x {
+	--pad-x: 2rem;
+	padding-left: var(--pad-x);
+	padding-right: var(--pad-x);
+}
+.md-padx-3x {
+	--pad-x: 3rem;
+	padding-left: var(--pad-x);
+	padding-right: var(--pad-x);
+}
+
+.md-pady-1x {
+	--pad-y: 1rem;
+	padding-top: var(--pad-y);
+	padding-bottom: var(--pad-y);
+}
+.md-pady-2x {
+	--pad-y: 2rem;
+	padding-top: var(--pad-y);
+	padding-bottom: var(--pad-y);
+}
+.md-pady-3x {
+	--pad-y: 3rem;
+	padding-top: var(--pad-y);
+	padding-bottom: var(--pad-y);
+}
+
+@media screen and (min-width: 768px) {
+	.md-padx-1x {
+		--pad-x: 2rem;
+	}
+	.md-padx-2x {
+		--pad-x: 4rem;
+	}
+	.md-padx-3x {
+		--pad-x: 6rem;
+	}
+
+	.md-pady-1x {
+		--pad-y: 2rem;
+	}
+	.md-pady-2x {
+		--pad-y: 4rem;
+	}
+	.md-pady-3x {
+		--pad-y: 6rem;
+	}
+}
+@media screen and (min-width: 1100px) {
+	.md-padx-1x {
+		--pad-x: 3rem;
+	}
+	.md-padx-2x {
+		--pad-x: 6rem;
+	}
+	.md-padx-3x {
+		--pad-x: 9rem;
+	}
+	.md-pady-1x {
+		--pad-y: 3rem;
+	}
+	.md-pady-2x {
+		--pad-y: 6rem;
+	}
+	.md-pady-3x {
+		--pad-y: 9rem;
+	}
+}
+
+/* general classes for margin */
+.mgy-05x {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+.mgy-01x {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.mgy-15x {
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+.mgy-20x {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+.mgy-25x {
+	margin-top: 2.5rem;
+	margin-bottom: 2.5rem;
+}
+
+.mgy-30x {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+
+.md-mgy-05x {
+	--mg-y: 0.5rem;
+	margin-top: var(--mg-y);
+	margin-bottom: var(--mg-y);
+}
+.md-mgy-01x {
+	--mg-y: 1rem;
+	margin-top: var(--mg-y);
+	margin-bottom: var(--mg-y);
+}
+.md-mgy-15x {
+	--mg-y: 1.5rem;
+	margin-top: var(--mg-y);
+	margin-bottom: var(--mg-y);
+}
+.md-mgy-20x {
+	--mg-y: 2rem;
+	margin-top: var(--mg-y);
+	margin-bottom: var(--mg-y);
+}
+
+@media screen and (min-width: 768px) {
+	.md-mgy-05x {
+		--mg-y: 1rem;
+	}
+	.md-mgy-01x {
+		--mg-y: 1.5rem;
+	}
+	.md-mgy-15x {
+		--mg-y: 2rem;
+	}
+	.md-mgy-20x {
+		--mg-y: 2.5rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.md-mgy-05x {
+		--mg-y: 1.5rem;
+	}
+	.md-mgy-01x {
+		--mg-y: 2rem;
+	}
+	.md-mgy-15x {
+		--mg-y: 2.5rem;
+	}
+	.md-mgy-20x {
+		--mg-y: 3rem;
+	}
+}
+
+/* buttons general classes */
+.btn {
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+	text-transform: capitalize;
+	border: 0px solid transparent;
+	color: inherit;
+	border-radius: 0.375em;
+	padding: 0.5em 1em;
+}
+
+.btn--primary {
+	background-color: var(--color-primary);
+	color: #fff;
+	font-weight: 500;
+}
+.btn--primary:hover {
+	background-color: var(--color-pink-700);
+}
+.btn--primary:active {
+	background-color: var(--color-pink-600);
+}
+
+.btn--primary-no-outline {
+	color: var(--color-primary);
+	font-weight: 500;
+	background-color: transparent;
+	padding: 0;
+}
+
+/* .btn--primary-no-outline:hover {
+	background-color: var(--color-gray-200);
+}
+.btn--primary-no-outline:active {
+	background-color: var(--color-gray-300);
+} */
+
+/* border radius */
+.round-6 {
+	border-radius: 0.6rem;
 }
