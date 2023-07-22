@@ -1,4 +1,5 @@
 import { Header, Hero, Movies } from "./containers";
+import { FixedAlert } from "./components";
 import "./App.css";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
 			<Header />
 			<Hero />
 			<main>
+				<FixedAlert />
 				<Movies />
 			</main>
 		</div>
