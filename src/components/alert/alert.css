@@ -1,0 +1,18 @@
+.alert {
+	padding: 0.625em 1.25em;
+	width: max-content;
+	border-radius: 9999px;
+	border: 1px solid transparent;
+	z-index: 600;
+	transform: translateY(calc(100% + 3rem));
+	transition: transform var(--transition-timing);
+}
+.alert--success {
+	color: var(--color-success-500);
+	background-color: var(--color-success-100);
+	border-color: var(--color-success-100);
+}
+
+.alert.show {
+	transform: translateY(0);
+}

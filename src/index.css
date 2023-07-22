@@ -43,6 +43,8 @@
 
 	--fixed-width: 1280px;
 
+	--transition-timing: 300ms;
+
 	--color-primary: var(--color-pink-800);
 	--color-body-bg: var(--color-white-100);
 	--color-body-text: var(--color-dark-100);
