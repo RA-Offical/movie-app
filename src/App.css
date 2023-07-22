@@ -48,7 +48,7 @@ picture {
 
 /* general flex and grid classes */
 .flex {
-	display: flex;
+	display: flex !important;
 }
 
 .flex-col {
@@ -120,7 +120,7 @@ picture {
 	width: 90%;
 }
 
-.margin-c {
+.mg-center {
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -334,7 +334,7 @@ picture {
 	display: inline-block;
 	text-align: center;
 	text-transform: capitalize;
-	border: 0px solid transparent;
+	border: 1px solid transparent;
 	color: inherit;
 	border-radius: 0.375em;
 	padding: 0.5em 1em;
@@ -342,7 +342,7 @@ picture {
 
 .btn--primary {
 	background-color: var(--color-primary);
-	color: #fff;
+	color: var(--color-white-200);
 	font-weight: 500;
 }
 .btn--primary:hover {
@@ -359,14 +359,25 @@ picture {
 	padding: 0;
 }
 
-/* .btn--primary-no-outline:hover {
-	background-color: var(--color-gray-200);
+.btn--icon-only {
+	--dimen: 4.8rem;
+	width: var(--dimen);
+	height: var(--dimen);
+	padding: 0;
 }
-.btn--primary-no-outline:active {
-	background-color: var(--color-gray-300);
-} */
 
-/* border radius */
+.btn--icon-only-sm {
+	--dimen: 3.5rem !important;
+}
+
+/* border radius general classes*/
 .round-6 {
 	border-radius: 0.6rem;
+}
+
+/* icon  general classes*/
+.icon-sm {
+	--icon-dimen: 2.5rem;
+	width: var(--icon-dimen);
+	height: var(--icon-dimen);
 }

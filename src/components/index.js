@@ -3,3 +3,4 @@ export { default as Loader } from "./loader/loader";
 export { default as Navbar } from "./navbar/navbar";
 export { default as Pagination } from "./pagination/pagination";
 export { default as Movie } from "./movie/movie";
+export { default as ButtonIcon } from "./button-icon/button-icon";

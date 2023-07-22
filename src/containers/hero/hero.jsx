@@ -3,7 +3,7 @@ import "./hero.css";
 const Hero = () => {
 	return (
 		<section className="hero-wrapper">
-			<div className="max-fw margin-c md-padx-1x grid align-ic hero">
+			<div className="max-fw mg-center md-padx-1x grid align-ic hero">
 				<div className="pady-01x hero-content">
 					<p className="hero__call-out">Help us find you the</p>
 					<h1 className="hero__title">Perfect Movie</h1>
@@ -23,7 +23,7 @@ const Hero = () => {
 					<img
 						src="./images/1.jpg"
 						alt=""
-						className="margin-c round-6 hero-movie__img"
+						className="mg-center round-6 hero-movie__img"
 					/>
 
 					<button className="btn btn--primary hero-movie__watchlist--btn">

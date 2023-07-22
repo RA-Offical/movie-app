@@ -23,6 +23,10 @@
 	--color-danger-300: #c82333;
 	--color-danger-400: #9d1c24;
 
+	--color-bright-red-100: #dc2626;
+	--color-bright-red-200: #cc2121;
+	--color-bright-red-300: #bb1d1d;
+
 	--color-success-100: #d4edda;
 	--color-success-200: #23ce6b;
 	--color-success-300: #28a745;
@@ -33,6 +37,8 @@
 	--color-blue-200: #0069d9;
 
 	--color-white-100: #f9fafb;
+	--color-white-200: #fff;
+
 	--color-dark-100: #333;
 
 	--fixed-width: 1280px;

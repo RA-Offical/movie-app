@@ -1,4 +1,4 @@
-import { Header, Hero } from "./containers";
+import { Header, Hero, Movies } from "./containers";
 import "./App.css";
 
 function App() {
@@ -6,7 +6,9 @@ function App() {
 		<div className="app">
 			<Header />
 			<Hero />
-			<main></main>
+			<main>
+				<Movies />
+			</main>
 		</div>
 	);
 }

@@ -1,3 +1,7 @@
+.header-wrapper {
+	background-color: var(--color-body-bg);
+	z-index: 500;
+}
 .header {
 	justify-content: space-between;
 

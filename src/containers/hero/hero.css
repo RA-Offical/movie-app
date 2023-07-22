@@ -35,7 +35,7 @@
 }
 
 .hero-movie__img {
-	max-width: 240px;
+	max-width: 220px;
 	width: 50%;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
@@ -50,6 +50,9 @@
 	color: var(--color-primary);
 	margin-bottom: 1em;
 	font-weight: 500;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .hero-movie__watchlist--btn {
