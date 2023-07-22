@@ -1,0 +1,18 @@
+.header {
+	justify-content: space-between;
+
+	/* border: 1px solid red; */
+}
+
+.logo {
+	color: var(--color-primary);
+	font-weight: 700;
+	font-size: 2rem;
+	margin-right: 10rem;
+}
+
+@media screen and (min-width: 768px) {
+	.header {
+		justify-content: flex-start;
+	}
+}

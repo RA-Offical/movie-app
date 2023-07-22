@@ -1,11 +1,13 @@
+import { Header, Hero } from "./containers";
 import "./App.css";
 
 function App() {
 	return (
-		<>
-			<h1>Perfect Movies</h1>
-			<button className="btn">Login</button>
-		</>
+		<div className="app">
+			<Header />
+			<Hero />
+			<main></main>
+		</div>
 	);
 }
 
