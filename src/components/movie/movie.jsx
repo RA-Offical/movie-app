@@ -8,7 +8,7 @@ const Movie = () => {
 	return (
 		<article className="movie">
 			<ButtonIcon
-				generalClasses={"movie__btn--add"}
+				generalClasses={"movie__btn--add btn--icon-only-sm"}
 				icon={<IoMdAdd className="icon-sm" />}
 			/>
 
