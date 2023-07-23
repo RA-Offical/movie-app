@@ -43,6 +43,8 @@
 
 	--fixed-width: 1280px;
 
+	--header-height: 8.5rem;
+
 	--transition-timing: 300ms;
 
 	--color-primary: var(--color-pink-800);

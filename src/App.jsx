@@ -1,16 +1,20 @@
 import { Header, Hero, Movies } from "./containers";
-import { FixedAlert, Loader, FixedOverlayLoader } from "./components";
+import { FixedAlert, FixedOverlayLoader } from "./components";
+import { Login, Signup, Account } from "./pages";
 import "./App.css";
 
 function App() {
 	return (
 		<div className="app">
 			<Header />
-			<Hero />
+			{/* <Hero /> */}
 			<main>
 				{/* <FixedAlert /> */}
-				<FixedOverlayLoader />
-				<Movies />
+				{/* <FixedOverlayLoader /> */}
+				{/* <Movies /> */}
+				{/* <Login /> */}
+				{/* <Signup /> */}
+				<Account />
 			</main>
 		</div>
 	);
