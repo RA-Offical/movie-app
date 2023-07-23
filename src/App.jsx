@@ -1,6 +1,6 @@
 import { Header, Hero, Movies } from "./containers";
 import { FixedAlert, FixedOverlayLoader } from "./components";
-import { Login, Signup, Account } from "./pages";
+import { Login, Signup, Account, WatchList } from "./pages";
 import "./App.css";
 
 function App() {
@@ -14,7 +14,8 @@ function App() {
 				{/* <Movies /> */}
 				{/* <Login /> */}
 				{/* <Signup /> */}
-				<Account />
+				{/* <Account /> */}
+				{/* <WatchList /> */}
 			</main>
 		</div>
 	);
