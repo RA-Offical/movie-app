@@ -3,7 +3,7 @@ import "./button-icon.css";
 const ButtonIcon = ({ generalClasses, icon }) => {
 	return (
 		<button
-			className={`flex align-ic justify-cc ${generalClasses} btn btn--icon-only btn--icon-only-sm`}
+			className={`flex align-ic justify-cc ${generalClasses} btn btn--icon-only`}
 		>
 			{icon}
 		</button>

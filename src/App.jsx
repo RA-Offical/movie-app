@@ -1,5 +1,5 @@
 import { Header, Hero, Movies } from "./containers";
-import { FixedAlert } from "./components";
+import { FixedAlert, Loader, FixedOverlayLoader } from "./components";
 import "./App.css";
 
 function App() {
@@ -8,7 +8,8 @@ function App() {
 			<Header />
 			<Hero />
 			<main>
-				<FixedAlert />
+				{/* <FixedAlert /> */}
+				<FixedOverlayLoader />
 				<Movies />
 			</main>
 		</div>
