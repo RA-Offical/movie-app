@@ -4,11 +4,13 @@ import { MdDelete } from "react-icons/md";
 import { ButtonIcon } from "../";
 import "./movie.css";
 
-const Movie = () => {
+const Movie = ({ type }) => {
 	return (
 		<article className="movie">
 			<ButtonIcon
-				generalClasses={"movie__btn--add btn--icon-only-sm"}
+				generalClasses={`movie__btn--${
+					type === "add" ? "add" : "delete"
+				} btn--icon-only-sm`}
 				icon={<IoMdAdd className="icon-sm" />}
 			/>
 

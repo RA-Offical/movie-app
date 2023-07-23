@@ -181,9 +181,10 @@ picture {
 	padding-bottom: 3rem;
 }
 
-.pady-header-height {
-	padding-top: var(--header-height);
-	padding-bottom: var(--header-height);
+.pady-app-top {
+	--pady-app-top: calc(var(--header-height) + 3rem);
+	padding-top: var(--pady-app-top);
+	padding-bottom: var(--pady-app-top);
 }
 
 .md-padx-1x {
@@ -480,4 +481,98 @@ picture {
 	.auth-side {
 		display: block;
 	}
+}
+
+/* movies container generalization */
+.movies {
+	--column-count: 2;
+	--card-width: 17rem;
+	grid-template-columns: repeat(
+		var(--column-count),
+		minmax(15rem, var(--card-width))
+	);
+	gap: 5rem 2rem;
+	justify-content: space-between;
+}
+
+@media screen and (min-width: 600px) {
+	.movies {
+		--column-count: 3;
+		column-gap: 4rem;
+	}
+}
+@media screen and (min-width: 860px) {
+	.movies {
+		--column-count: 4;
+		column-gap: 4rem;
+	}
+}
+@media screen and (min-width: 1100px) {
+	.movies {
+		--column-count: 5;
+	}
+}
+
+/* movie component generalization */
+.movie {
+	max-width: var(--card-width);
+	position: relative;
+}
+
+.movie__img {
+	width: 100%;
+	max-width: 220px;
+}
+
+.movie-content {
+	text-align: center;
+	margin-top: 1rem;
+	padding: 1rem;
+}
+
+.movie__name {
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	overflow: hidden;
+}
+
+/* These are movie specific buttons (add and delete) that's why I have put their css here */
+
+.movie .btn--icon-only {
+	position: absolute;
+	right: 0.5rem;
+	top: -0.5rem;
+}
+
+.movie__btn--add {
+	background-color: var(--color-primary);
+}
+
+.movie__btn--add svg {
+	fill: var(--color-white-200);
+}
+
+.movie__btn--add:hover {
+	background-color: var(--color-pink-700);
+}
+
+.movie__btn--add:active {
+	background-color: var(--color-pink-600);
+}
+
+.movie__btn--delete {
+	background-color: var(--color-bright-red-100);
+}
+
+.movie__btn--delete svg {
+	fill: var(--color-white-200);
+}
+
+.movie__btn--delete:hover {
+	background-color: var(--color-bright-red-200);
+}
+.movie__btn--delete:active {
+	background-color: var(--color-bright-red-300);
 }

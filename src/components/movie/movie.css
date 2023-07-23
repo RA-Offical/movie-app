@@ -1,8 +1,6 @@
-.movie {
+/* .movie {
 	max-width: var(--card-width);
 	position: relative;
-
-	/* border: 1px solid red; */
 }
 
 .movie__img {
@@ -24,7 +22,7 @@
 	overflow: hidden;
 }
 
-/* These are movie specific buttons (add and delete) that's why I have put their css here*/
+These are movie specific buttons (add and delete) that's why I have put their css here
 
 .movie .btn--icon-only {
 	position: absolute;
@@ -61,4 +59,4 @@
 }
 .movie__btn--delete:active {
 	background-color: var(--color-bright-red-300);
-}
+} */
