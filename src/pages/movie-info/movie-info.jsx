@@ -1,14 +1,15 @@
+import { Link } from "react-router-dom";
 import "./movie-info.css";
 
 const MovieInfo = () => {
 	return (
-		<div>
+		<main>
 			<section className="max-fw mg-center md-padx-1x pady-app-top movie-info">
-				<h2 className="movie__name">Justice League</h2>
-				<p className="movie__launch-date">2023-02-12</p>
+				<h2 className="movie-info__name">Justice League</h2>
+				<p className="movie-info__launch-date">2023-02-12</p>
 
-				<div className="grid justify-btw  movie-detail-card">
-					<p className="movie__desc">
+				<div className="grid justify-btw  movie-info-detail-card">
+					<p className="movie-info__desc">
 						Justice League is a 2017 American superhero film based
 						on the DC Comics superhero team of the same name.
 						Produced by Warner Bros. Pictures, DC Films, RatPac-Dune
@@ -30,18 +31,20 @@ const MovieInfo = () => {
 					<img
 						src="../images/5.jpg"
 						alt=""
-						className="round-6 movie__img"
+						className="round-6 movie-info__img"
 					/>
 				</div>
 
-				<p className="movie__rating">Movie Rating: 79</p>
-				<a href="#" className="movie__link">
+				<p className="movie-info__rating">Movie Rating: 79</p>
+				<a href="#" className="movie-info__link">
 					Get Movie
 				</a>
 
-				<button className="btn btn--primary">Back</button>
+				<Link to="/" className="btn btn--primary">
+					Back
+				</Link>
 			</section>
-		</div>
+		</main>
 	);
 };
 
