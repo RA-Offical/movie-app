@@ -1,9 +1,11 @@
 import { Movie } from "../../components";
+import { Pagination } from "../../components";
+
 import "./movies.css";
 
 const Movies = () => {
 	return (
-		<section className="movies-cont">
+		<section className="movies-cont pady-30x">
 			<div className="max-fw mg-center md-padx-1x md-pady-2x grid movies">
 				<Movie type={"add"} />
 				<Movie type={"add"} />
@@ -13,6 +15,7 @@ const Movies = () => {
 				<Movie type={"add"} />
 				<Movie type={"add"} />
 			</div>
+			<Pagination />
 		</section>
 	);
 };

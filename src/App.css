@@ -46,78 +46,6 @@ picture {
 	}
 }
 
-/* general flex and grid classes */
-.flex {
-	display: flex !important;
-}
-
-.flex-col {
-	flex-direction: column;
-}
-
-.grid {
-	display: grid;
-}
-
-.align-cc {
-	align-content: center;
-}
-
-.align-ic {
-	align-items: center;
-}
-
-.justify-cc {
-	justify-content: center;
-}
-
-.justify-ic {
-	justify-items: center;
-}
-
-.justify-btw {
-	justify-content: space-between;
-}
-
-/* general position classes */
-.absolute {
-	position: absolute;
-}
-
-.fixed {
-	position: fixed;
-}
-
-/* general position layouts */
-
-.bottom-0 {
-	bottom: 0;
-}
-
-.left-0 {
-	left: 0;
-}
-
-.left-50x {
-	left: 50%;
-}
-
-.top-0 {
-	top: 0;
-}
-
-.top-50x {
-	top: 50%;
-}
-
-.right-0 {
-	right: 0;
-}
-
-.abs-gen-self-center {
-	transform: translateX(-50%) translateY(-50%);
-}
-
 /* general classes about section max width and centering */
 .max-fw {
 	max-width: var(--fixed-width);
@@ -575,4 +503,81 @@ picture {
 }
 .movie__btn--delete:active {
 	background-color: var(--color-bright-red-300);
+}
+
+/* psudo element */
+.no-after::after {
+	content: none;
+}
+
+/* general flex and grid classes */
+.flex {
+	display: flex;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.grid {
+	display: grid;
+}
+
+.align-cc {
+	align-content: center;
+}
+
+.align-ic {
+	align-items: center;
+}
+
+.justify-cc {
+	justify-content: center;
+}
+
+.justify-ic {
+	justify-items: center;
+}
+
+.justify-btw {
+	justify-content: space-between;
+}
+
+/* general position classes */
+.absolute {
+	position: absolute;
+}
+
+.fixed {
+	position: fixed;
+}
+
+/* general position layouts */
+
+.bottom-0 {
+	bottom: 0;
+}
+
+.left-0 {
+	left: 0;
+}
+
+.left-50x {
+	left: 50%;
+}
+
+.top-0 {
+	top: 0;
+}
+
+.top-50x {
+	top: 50%;
+}
+
+.right-0 {
+	right: 0;
+}
+
+.abs-gen-self-center {
+	transform: translateX(-50%) translateY(-50%);
 }
