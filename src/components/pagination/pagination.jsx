@@ -1,20 +1,31 @@
+import { GlobalContext } from "../../context";
 import "./pagination.css";
 
 const Pagination = () => {
+	const { currentPage, changePage } = GlobalContext();
+
+	const buttonArray = [1, 2, 3, 4, 5, 6, 8, 9];
+
 	return (
 		<div className="max-fw mg-center pagination-wrapper">
 			<section className="flex mg-center round-6 pagination">
 				<button className="no-after btn pagination__btn">Prev</button>
 				<div className="flex pagination-btn-group">
-					<button className="btn pagination__btn ">1</button>
-					<button className="btn pagination__btn  active">2</button>
-					<button className="btn pagination__btn">3</button>
-					<button className="btn pagination__btn">4</button>
-					<button className="btn pagination__btn">5</button>
-					<button className="btn pagination__btn">6</button>
-					<button className="btn pagination__btn">7</button>
-					<button className="btn pagination__btn">8</button>
-					<button className="btn pagination__btn">9</button>
+					{buttonArray.map((value) => {
+						return (
+							<button
+								key={value}
+								className={`btn pagination__btn ${
+									currentPage === value ? "active" : ""
+								}`}
+								onClick={(e) => {
+									changePage(value);
+								}}
+							>
+								{value}
+							</button>
+						);
+					})}
 				</div>
 				<button className="btn pagination__btn">Next</button>
 			</section>
