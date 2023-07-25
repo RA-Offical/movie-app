@@ -581,3 +581,9 @@ picture {
 .abs-gen-self-center {
 	transform: translateX(-50%) translateY(-50%);
 }
+
+/* show and hidden */
+
+.hidden {
+	display: none;
+}

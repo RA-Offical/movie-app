@@ -3,7 +3,7 @@ import { MdDelete } from "react-icons/md";
 import { ButtonIcon } from "../";
 import "./movie.css";
 
-const Movie = ({ type }) => {
+const Movie = ({ id, name, img_url, type }) => {
 	return (
 		<article className="movie">
 			<ButtonIcon
@@ -19,11 +19,9 @@ const Movie = ({ type }) => {
 				}
 			/>
 
-			<img src="../images/3.jpg" className="round-6 movie__img" />
+			<img src={img_url} className="round-6 movie__img" alt={name} />
 			<div className="movie-content">
-				<h2 className="movie__name">
-					Shangchi and the legend of 10 rings. This is long text here
-				</h2>
+				<h2 className="movie__name">{name}</h2>
 			</div>
 		</article>
 	);

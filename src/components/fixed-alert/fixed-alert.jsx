@@ -5,7 +5,7 @@ const FixedAlert = () => {
 	return (
 		<Alert
 			generalClasses={
-				"fixed left-0 right-0 bottom-3 mg-center rounded-pill show"
+				"fixed left-0 right-0 bottom-3 mg-center rounded-pill"
 			}
 		/>
 	);
