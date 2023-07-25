@@ -10,7 +10,13 @@ const Movie = ({ type }) => {
 				generalClasses={`movie__btn--${
 					type === "add" ? "add" : "delete"
 				} btn--icon-only-sm`}
-				icon={<IoMdAdd className="icon-sm" />}
+				icon={
+					type === "add" ? (
+						<IoMdAdd className="icon-sm" />
+					) : (
+						<MdDelete className="icon-sm" />
+					)
+				}
 			/>
 
 			<img src="../images/3.jpg" className="round-6 movie__img" />
