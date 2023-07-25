@@ -1,12 +1,12 @@
 .header-wrapper {
-	background-color: var(--color-body-bg);
+	--opacity: 0.9;
 	z-index: 500;
+	background-color: rgba(var(--color-body-bg), var(--opacity));
+	backdrop-filter: blur(15px);
 }
 .header {
 	justify-content: space-between;
 	height: var(--header-height);
-
-	/* border: 1px solid red; */
 }
 
 .logo {

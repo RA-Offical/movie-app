@@ -1,6 +1,5 @@
 import { IoMdAdd } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
-
 import { ButtonIcon } from "../";
 import "./movie.css";
 
