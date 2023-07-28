@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { Movie } from "../../components";
 import { Pagination, FixedOverlayLoader } from "../../components";
-import { GlobalContext } from "../../context";
+import { useGlobalContext } from "../../context";
 import "./movies.css";
 
 const Movies = () => {
-	const { movies, isLoading } = GlobalContext();
+	const { movies, isLoading } = useGlobalContext();
 
 	if (isLoading) {
 		return <FixedOverlayLoader />;

@@ -1,11 +1,11 @@
 import gradientImg from "../../assets/gradient.jpg";
 import { Link } from "react-router-dom";
-import { GlobalContext } from "../../context";
+import { useGlobalContext } from "../../context";
 import "./hero.css";
 import { useEffect } from "react";
 
 const Hero = () => {
-	const { randomMovie } = GlobalContext();
+	const { randomMovie } = useGlobalContext();
 
 	const { name, img_url } = randomMovie;
 
