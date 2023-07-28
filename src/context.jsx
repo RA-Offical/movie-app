@@ -15,6 +15,7 @@ const initialState = {
 	randomMovie: {},
 	user: {},
 	userToken: "",
+	watchlist: [],
 };
 
 // creating app context
@@ -90,6 +91,10 @@ const AppProvider = ({ children }) => {
 		return loginResult;
 	};
 
+	const addMovieToWatchList = (movie) => {
+		dispatch({ type: "ADD_TO_WATCHLIST", payload: { movie } });
+	};
+
 	useEffect(() => {
 		getRandomMovie();
 	}, []);
@@ -109,6 +114,7 @@ const AppProvider = ({ children }) => {
 				loginUser,
 				setToken,
 				setLogin,
+				addMovieToWatchList,
 			}}
 		>
 			{children}

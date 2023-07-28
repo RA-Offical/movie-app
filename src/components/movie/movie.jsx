@@ -2,10 +2,25 @@ import { IoMdAdd } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
 import { ButtonIcon } from "../";
 import "./movie.css";
+import { useNavigate } from "react-router-dom";
+import { useGlobalContext } from "../../context";
 
-const Movie = ({ id, name, img_url, type }) => {
+const Movie = (props) => {
+	const {
+		movie: { id, name, img_url },
+		type,
+	} = props;
+
+	const { addMovieToWatchlist } = useGlobalContext();
+
+	const navigate = useNavigate();
+
+	const handleMovieClick = (id) => {
+		navigate(`/movie/${id}`);
+	};
+
 	return (
-		<article className="movie">
+		<article className="movie" onClick={() => handleMovieClick(id)}>
 			<ButtonIcon
 				generalClasses={`movie__btn--${
 					type === "add" ? "add" : "delete"
@@ -17,6 +32,7 @@ const Movie = ({ id, name, img_url, type }) => {
 						<MdDelete className="icon-sm" />
 					)
 				}
+				handleClick={addMovieToWatchlist?.bind(this, id)}
 			/>
 
 			<img src={img_url} className="round-6 movie__img" alt={name} />
