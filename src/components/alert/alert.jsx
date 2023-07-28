@@ -1,9 +1,9 @@
 import "./alert.css";
 
-const Alert = ({ generalClasses }) => {
+const Alert = ({ generalClasses, text }) => {
 	return (
-		<div className={`${generalClasses} alert alert--danger`} role="alert">
-			<p className="alert__msg">Movie added to watchlist successfully</p>
+		<div className={`${generalClasses} alert`} role="alert">
+			<p className="alert__msg">{text}</p>
 		</div>
 	);
 };

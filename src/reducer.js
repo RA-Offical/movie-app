@@ -23,6 +23,18 @@ const reducer = (state, action) => {
 		return { ...state, currentPage: action.payload.pageNo };
 	}
 
+	if (action.type === "STORE_USER") {
+		return { ...state, user: action.payload.data };
+	}
+
+	if (action.type === "SET_TOKEN") {
+		return { ...state, userToken: action.payload.token };
+	}
+
+	if (action.type === "SET_LOGIN") {
+		return { ...state, isUserLogin: action.payload.isUserLogin };
+	}
+
 	return state;
 };
 

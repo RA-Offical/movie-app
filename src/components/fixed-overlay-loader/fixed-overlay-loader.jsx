@@ -1,9 +1,9 @@
 import { Loader } from "..";
-import { GlobalContext } from "../../context";
+import { useGlobalContext } from "../../context";
 import "./fixed-overlay-loader.css";
 
 const FixedOverlayLoader = () => {
-	const { isLoading } = GlobalContext();
+	const { isLoading } = useGlobalContext();
 
 	return (
 		<div className="fixed top-0 left-0 right-0 bottom-0 fixed-ovarlay-loader">

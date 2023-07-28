@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
-import "./signup.css";
 import sideImg from "../../assets/side.png";
-import { FormGroup } from "../../components";
+import { Alert, FormGroup } from "../../components";
 import signupMetaData from "../../data/signupData";
 import { useForm } from "react-hook-form";
-
+import { useGlobalContext } from "../../context";
+import { signup } from "../../utils/fetchdata";
+import "./signup.css";
+import { useState } from "react";
 const Signup = () => {
+	const [alert, setAlert] = useState({ show: false, type: "", text: "" });
+
 	const {
 		register,
 		getValues,
@@ -13,8 +17,41 @@ const Signup = () => {
 		formState: { errors },
 	} = useForm();
 
-	const submitSignup = () => {
-		console.log(getValues());
+	const { baseUrl, onSignup, loginUser, setToken } = useGlobalContext();
+
+	const submitSignup = async (values) => {
+		delete values["confirmPassword"];
+		const result = await signup(`${baseUrl}user/signup`, values);
+		setAlertState(result);
+
+		if (result.success) {
+			onSignup(values);
+
+			const user_name = values.user_name;
+			const password = values.password;
+
+			loginUser({
+				user_name,
+				password,
+			});
+		}
+	};
+
+	const setAlertState = (response) => {
+		console.log(response);
+		if (response.success) {
+			setAlert({
+				show: true,
+				type: "success",
+				text: response.message,
+			});
+		} else {
+			setAlert({
+				show: true,
+				type: "danger",
+				text: response.message,
+			});
+		}
 	};
 
 	return (
@@ -55,6 +92,13 @@ const Signup = () => {
 							</button>
 						</div>
 					</form>
+
+					{alert.show && (
+						<Alert
+							generalClasses={`mgy-15x alert--${alert.type}`}
+							text={alert.text}
+						/>
+					)}
 				</section>
 				<div className="auth-side">
 					<img src={sideImg} alt="" />

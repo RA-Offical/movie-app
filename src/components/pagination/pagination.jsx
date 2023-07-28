@@ -1,9 +1,9 @@
-import { GlobalContext } from "../../context";
+import { useGlobalContext } from "../../context";
 import "./pagination.css";
 
 const Pagination = () => {
 	const { currentPage, changePage, incrementPage, decrementPage } =
-		GlobalContext();
+		useGlobalContext();
 	const buttonArray = [1, 2, 3, 4, 5, 6, 8, 9];
 
 	return (

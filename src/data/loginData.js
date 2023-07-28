@@ -1,8 +1,8 @@
 const loginMetaData = [
 	{
-		id: "username",
+		id: "user_name",
 		label: "Username",
-		name: "username",
+		name: "user_name",
 		type: "text",
 		validationRules: {
 			required: { value: true, message: `Username is required` },

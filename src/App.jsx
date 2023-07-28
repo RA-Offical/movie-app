@@ -6,12 +6,12 @@ import {
 } from "react-router-dom";
 import { SharedLayout } from "./containers";
 import { Login, Signup, Account, WatchList, MovieInfo, Home } from "./pages";
-import { GlobalContext } from "./context";
+import { useGlobalContext } from "./context";
 
 import "./App.css";
 
 function App() {
-	const { isUserLogin } = GlobalContext();
+	const { isUserLogin } = useGlobalContext();
 
 	return (
 		<Router>

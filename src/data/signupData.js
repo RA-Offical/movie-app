@@ -1,17 +1,17 @@
 const signupMeta = [
 	{
-		id: "name",
+		id: "full_name",
 		label: "Name",
-		name: "name",
+		name: "full_name",
 		type: "text",
 		validationRules: {
 			required: { value: true, message: `Username is required` },
 		},
 	},
 	{
-		id: "username",
+		id: "user_name",
 		label: "Username",
-		name: "username",
+		name: "user_name",
 		type: "text",
 		validationRules: {
 			required: { value: true, message: `Username is required` },
@@ -59,7 +59,6 @@ const signupMeta = [
 			},
 			validate: (values) => {
 				const { password, confirmPassword } = values();
-				console.log(password, confirmPassword);
 				return (
 					password === confirmPassword || "Password does not match"
 				);

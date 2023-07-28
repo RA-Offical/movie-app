@@ -1,18 +1,20 @@
 import { createContext, useEffect, useReducer, useContext } from "react";
 
 import reducer from "./reducer";
-import { fetchData } from "./utils/fetchdata";
+import { fetchData, login } from "./utils/fetchdata";
 
 // movie api base url
-const baseUrl = "http://movieto-api.vercel.app/";
 
 // initializing state
 const initialState = {
+	baseUrl: "http://movieto-api.vercel.app/",
 	isUserLogin: false,
 	currentPage: 1,
 	movies: [],
 	isLoading: true,
 	randomMovie: {},
+	user: {},
+	userToken: "",
 };
 
 // creating app context
@@ -27,7 +29,7 @@ const AppProvider = ({ children }) => {
 		dispatch({ type: "LOADING" });
 
 		const result = await fetchData(
-			`${baseUrl}movie/all?page=${state.currentPage}`
+			`${state.baseUrl}movie/all?page=${state.currentPage}`
 		);
 
 		if (result.success) {
@@ -59,7 +61,7 @@ const AppProvider = ({ children }) => {
 	};
 
 	const getRandomMovie = async () => {
-		const result = await fetchData(`${baseUrl}movie`);
+		const result = await fetchData(`${state.baseUrl}movie`);
 
 		if (result.success) {
 			dispatch({
@@ -67,6 +69,25 @@ const AppProvider = ({ children }) => {
 				payload: { randomMovie: result.data },
 			});
 		}
+	};
+
+	const onSignup = (data) => {
+		dispatch({ type: "STORE_USER", payload: { data } });
+	};
+
+	const setToken = (token) => {
+		dispatch({ type: "SET_TOKEN", payload: { token } });
+	};
+
+	const setLogin = (value) => {
+		dispatch({ type: "SET_LOGIN", payload: { isUserLogin: value } });
+	};
+
+	const loginUser = async (dataObj) => {
+		const loginResult = await login(`${state.baseUrl}user/login`, dataObj);
+
+		loginResult.success && setToken(loginResult.token);
+		return loginResult;
 	};
 
 	useEffect(() => {
@@ -79,7 +100,16 @@ const AppProvider = ({ children }) => {
 
 	return (
 		<AppContext.Provider
-			value={{ ...state, changePage, incrementPage, decrementPage }}
+			value={{
+				...state,
+				changePage,
+				incrementPage,
+				decrementPage,
+				onSignup,
+				loginUser,
+				setToken,
+				setLogin,
+			}}
 		>
 			{children}
 		</AppContext.Provider>
@@ -88,7 +118,7 @@ const AppProvider = ({ children }) => {
 
 // for using app context without importing useContext and then putting appContext in it. I am making a custom hook to combine both so that we only have to import this custom hook
 
-const GlobalContext = () => useContext(AppContext);
+const useGlobalContext = () => useContext(AppContext);
 
 //exporting app provider and custom hook Global Context
-export { AppProvider, GlobalContext };
+export { AppProvider, useGlobalContext };

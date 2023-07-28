@@ -6,7 +6,7 @@ const SharedLayout = () => {
 	return (
 		<div className="app">
 			<Header />
-			<FixedAlert />
+			{/* <FixedAlert /> */}
 			<Outlet />
 		</div>
 	);
