@@ -416,12 +416,15 @@ picture {
 .movie__img {
 	width: 100%;
 	max-width: 220px;
+
+	cursor: pointer;
 }
 
 .movie-content {
 	text-align: center;
 	margin-top: 1rem;
 	padding: 1rem;
+	cursor: pointer;
 }
 
 .movie__name {

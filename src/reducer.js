@@ -35,6 +35,10 @@ const reducer = (state, action) => {
 		return { ...state, isUserLogin: action.payload.isUserLogin };
 	}
 
+	if (action.type === "ADD_TO_WATCHLIST") {
+		console.log(action.payload.movie);
+	}
+
 	return state;
 };
 

@@ -6,12 +6,12 @@ const Watchlist = () => {
 		<main>
 			<div className="">
 				<section className="max-fw mg-center   md-padx-1x pady-app-top pady-header-height grid movies watchlist">
+					{/* <Movie type={"delete"} />
 					<Movie type={"delete"} />
 					<Movie type={"delete"} />
 					<Movie type={"delete"} />
 					<Movie type={"delete"} />
-					<Movie type={"delete"} />
-					<Movie type={"delete"} />
+					<Movie type={"delete"} /> */}
 				</section>
 			</div>
 		</main>

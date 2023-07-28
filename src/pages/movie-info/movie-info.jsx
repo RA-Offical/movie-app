@@ -1,12 +1,31 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./movie-info.css";
+import { getItem } from "../../utils/search";
+import gradientImg from "../../assets/gradient.jpg";
+import { useGlobalContext } from "../../context";
 
 const MovieInfo = () => {
+	const { movies } = useGlobalContext();
+	const { movieId } = useParams();
+	const movie = getItem(movies, parseInt(movieId, 10));
+
+	if (!movie) {
+		return (
+			<main>
+				<section className="max-fw mg-center md-padx-1x pady-app-top">
+					<h2>No such movie found</h2>
+				</section>
+			</main>
+		);
+	}
+
+	const { name, img_url, url, launch_date, rating } = movie;
+
 	return (
 		<main>
 			<section className="max-fw mg-center md-padx-1x pady-app-top movie-info">
-				<h2 className="movie-info__name">Justice League</h2>
-				<p className="movie-info__launch-date">2023-02-12</p>
+				<h2 className="movie-info__name">{name}</h2>
+				<p className="movie-info__launch-date">{launch_date}</p>
 
 				<div className="grid justify-btw  movie-info-detail-card">
 					<p className="movie-info__desc">
@@ -29,15 +48,15 @@ const MovieInfo = () => {
 					</p>
 
 					<img
-						src="../images/5.jpg"
+						src={img_url || gradientImg}
 						alt=""
 						className="round-6 movie-info__img"
 					/>
 				</div>
 
-				<p className="movie-info__rating">Movie Rating: 79</p>
+				<p className="movie-info__rating">Movie Rating: {rating}</p>
 				<a href="#" className="movie-info__link">
-					Get Movie
+					{url}
 				</a>
 
 				<Link to="/" className="btn btn--primary">
