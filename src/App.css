@@ -352,40 +352,6 @@ picture {
 	width: 100%;
 }
 
-.auth-input-group {
-	position: relative;
-}
-
-.auth-input-group::after {
-	content: "";
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: 2px;
-	background-color: var(--color-primary);
-}
-
-.auth-input__field {
-	border: 0;
-	padding: 0.5rem 0;
-	background-color: transparent;
-	color: inherit;
-}
-
-.auth-input__field:focus {
-	outline: none;
-}
-
-.auth-input__error {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	font-size: 1.4rem;
-	color: var(--color-danger-200);
-	display: none;
-}
-
 .auth-side {
 	position: sticky;
 	top: 0;
@@ -586,4 +552,15 @@ picture {
 
 .hidden {
 	display: none;
+}
+
+.show {
+	display: block;
+}
+
+/* disabled */
+.disabled {
+	pointer-events: none;
+	cursor: auto;
+	opacity: 0.8;
 }

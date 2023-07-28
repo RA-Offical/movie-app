@@ -12,7 +12,7 @@ const Movies = () => {
 	}
 
 	return (
-		<section className="movies-cont pady-30x">
+		<section id="movies-list" className="movies-cont pady-30x">
 			<div className="max-fw mg-center md-padx-1x md-pady-2x grid movies">
 				{movies.map((movie) => {
 					return <Movie key={movie.id} {...movie} type={"add"} />;

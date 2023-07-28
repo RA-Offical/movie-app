@@ -1,3 +1,7 @@
+#movies-list {
+	scroll-margin: var(--header-height);
+}
+
 /* .movies {
 	--column-count: 2;
 	--card-width: 17rem;

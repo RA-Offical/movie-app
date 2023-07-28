@@ -1,51 +1,42 @@
 import { Link } from "react-router-dom";
 import sideImg from "../../assets/side.png";
+import { FormGroup } from "../../components";
+import loginMetaData from "../../data/loginData";
+import { useForm } from "react-hook-form";
 import "./login.css";
 
 const Login = () => {
+	const {
+		register,
+		getValues,
+		handleSubmit,
+		formState: { errors },
+	} = useForm();
+
+	const submitLogin = () => {
+		console.log(getValues());
+	};
 	return (
 		<main>
 			<div className="flex gen-auth">
 				<section className="md-padx-1x pady-header-height max-fw mg-center grid align-cc justify-cc justify-ic auth-content">
 					<h2 className="auth__title">Login</h2>
-					<form className="flex flex-col padx-01x pady-01x auth-form">
-						<div className="flex flex-col auth-input-group">
-							<label
-								htmlFor="username"
-								className="auth-input__label"
-							>
-								Username
-							</label>
-							<input
-								type="text"
-								id="username"
-								className="auth-input__field"
-								autoFocus
-							/>
-							<div className="auth-input__error">
-								<p className="auth-input__error__text">
-									Input field is empty
-								</p>
-							</div>
-						</div>
-						<div className="flex flex-col auth-input-group">
-							<label
-								htmlFor="password"
-								className="auth-input__label"
-							>
-								Password
-							</label>
-							<input
-								type="text"
-								id="password"
-								className="auth-input__field"
-							/>
-							<div className="auth-input__error">
-								<p className="auth-input__error__text">
-									Input field is empty
-								</p>
-							</div>
-						</div>
+					<form
+						className="flex flex-col padx-01x pady-01x auth-form"
+						onSubmit={handleSubmit(submitLogin)}
+					>
+						{loginMetaData.map((data) => {
+							return (
+								<FormGroup
+									key={data.id}
+									{...data}
+									getValues={getValues}
+									register={register}
+									error={errors[data.name]}
+								/>
+							);
+						})}
+
 						<div className="flex align-ic justify-btw  auth-action">
 							<div className="auth-action__invert">
 								Don't have an account!{" "}
