@@ -2,14 +2,19 @@ import { GlobalContext } from "../../context";
 import "./pagination.css";
 
 const Pagination = () => {
-	const { currentPage, changePage } = GlobalContext();
-
+	const { currentPage, changePage, incrementPage, decrementPage } =
+		GlobalContext();
 	const buttonArray = [1, 2, 3, 4, 5, 6, 8, 9];
 
 	return (
 		<div className="max-fw mg-center pagination-wrapper">
 			<section className="flex mg-center round-6 pagination">
-				<button className="no-after btn pagination__btn">Prev</button>
+				<button
+					className="no-after btn pagination__btn"
+					onClick={decrementPage}
+				>
+					Prev
+				</button>
 				<div className="flex pagination-btn-group">
 					{buttonArray.map((value) => {
 						return (
@@ -27,7 +32,9 @@ const Pagination = () => {
 						);
 					})}
 				</div>
-				<button className="btn pagination__btn">Next</button>
+				<button className="btn pagination__btn" onClick={incrementPage}>
+					Next
+				</button>
 			</section>
 		</div>
 	);

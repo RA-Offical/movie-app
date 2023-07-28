@@ -1,6 +1,14 @@
+import gradientImg from "../../assets/gradient.jpg";
+import { Link } from "react-router-dom";
+import { GlobalContext } from "../../context";
 import "./hero.css";
+import { useEffect } from "react";
 
 const Hero = () => {
+	const { randomMovie } = GlobalContext();
+
+	const { name, img_url } = randomMovie;
+
 	return (
 		<section className="hero-wrapper">
 			<div className="max-fw mg-center md-padx-1x grid align-ic hero">
@@ -13,22 +21,28 @@ const Hero = () => {
 						confused watch one of our choosen here.
 					</p>
 
-					<button className="btn btn--primary hero__find--btn">
+					<a
+						href="#movies-list"
+						className="btn btn--primary hero__find--btn"
+					>
 						Find Movie
-					</button>
+					</a>
 				</div>
 				<div className="pady-01x hero-movie">
 					<p className="hero-movie__call-out">You may like</p>
-					<h2 className="hero-movie__name">Loading...</h2>
+					<h2 className="hero-movie__name">{name || "Loading..."}</h2>
 					<img
-						src="./images/1.jpg"
+						src={img_url || gradientImg}
 						alt=""
 						className="mg-center round-6 hero-movie__img"
 					/>
 
-					<button className="btn btn--primary hero-movie__watchlist--btn">
+					<Link
+						to="/watchlist"
+						className="btn btn--primary hero-movie__watchlist--btn"
+					>
 						Add to Watchlist
-					</button>
+					</Link>
 				</div>
 			</div>
 		</section>

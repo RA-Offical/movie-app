@@ -10,6 +10,19 @@ const reducer = (state, action) => {
 	if (action.type === "CHANGE_PAGE") {
 		return { ...state, currentPage: action.payload.pageNo };
 	}
+
+	if (action.type === "DISPLAY_RANDOM_MOVIE") {
+		return { ...state, randomMovie: action.payload.randomMovie };
+	}
+
+	if (action.type === "INCREMENT_PAGE") {
+		return { ...state, currentPage: action.payload.pageNo };
+	}
+
+	if (action.type === "DECREMENT_PAGE") {
+		return { ...state, currentPage: action.payload.pageNo };
+	}
+
 	return state;
 };
 
