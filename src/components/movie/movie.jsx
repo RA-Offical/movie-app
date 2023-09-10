@@ -6,14 +6,14 @@ import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../../context";
 
 const Movie = (props) => {
+	const { addMovieToWatchList } = useGlobalContext();
+
+	const navigate = useNavigate();
+
 	const {
 		movie: { id, name, img_url },
 		type,
 	} = props;
-
-	const { addMovieToWatchlist } = useGlobalContext();
-
-	const navigate = useNavigate();
 
 	const handleMovieClick = (id) => {
 		navigate(`/movie/${id}`);
@@ -32,7 +32,7 @@ const Movie = (props) => {
 						<MdDelete className="icon-sm" />
 					)
 				}
-				handleClick={addMovieToWatchlist?.bind(this, id)}
+				handleClick={addMovieToWatchList?.bind(null, props.movie)}
 			/>
 
 			<img src={img_url} className="round-6 movie__img" alt={name} />

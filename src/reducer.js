@@ -37,6 +37,10 @@ const reducer = (state, action) => {
 
 	if (action.type === "ADD_TO_WATCHLIST") {
 		console.log(action.payload.movie);
+		return {
+			...state,
+			watchlist: [...state.watchlist, action.payload.movie],
+		};
 	}
 
 	return state;
