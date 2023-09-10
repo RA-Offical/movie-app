@@ -1,3 +1,6 @@
+### Live preview
+https://rmovies-rashid-ameer.netlify.app/
+
 ### Movie Count
 
 ##### Description
